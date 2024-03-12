@@ -11,22 +11,22 @@ namespace AprovadoReprovado
         static void Main(string[] args)
         {
             Console.WriteLine("Informe a porcentagem de presença do aluno: ");
-            double porcentagem = double.Parse(Console.ReadLine());
+            double presenca = double.Parse(Console.ReadLine());
 
             Console.WriteLine("Informe a média do aluno: ");
             double nota = double.Parse(Console.ReadLine());
 
-            if (nota <= 7 && porcentagem <= 75)
+            if (nota >= 7 && presenca >= 75)
             {
                 Console.WriteLine("Aluno Aprovado!");
             }
-            else if (nota >= 4 && porcentagem <= 75 || nota <= 7 && porcentagem >= 75)
+            else if (nota >= 4 && presenca <= 75 || nota <= 7 && presenca >= 75)
             {
-                Console.WriteLine("O Aluno está em recuperação.");
+                Console.WriteLine("O Aluno está em recuperação");
             }
-            else if(nota >= 4 && porcentagem >= 75)
+            else
             {
-                Console.WriteLine("O aluno está retido.");
+                Console.WriteLine("O aluno está retido");
             }
             Console.ReadKey();
         }
